@@ -2,6 +2,9 @@
 
 Coding challenge from https://berghain.challenges.listenlabs.ai/
 
+- [Rules.md](./Rules.md)
+- [API.md](./API.md)
+
 ## effort
 
 - 03:00-03:30 concept 1

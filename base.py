@@ -90,7 +90,7 @@ def run_algorithm(algo_function: Callable, scenario=1, max_iterations=20000):
         attribute_statistics = game_data["attributeStatistics"]
         correlations = attribute_statistics.get("correlations", {})
 
-        constraint_progress = {constraint["attribute"]: 0 for constraint in constraints}
+        accepted_count = {constraint["attribute"]: 0 for constraint in constraints}
 
         status = "running"
         person_index = 0
@@ -108,7 +108,7 @@ def run_algorithm(algo_function: Callable, scenario=1, max_iterations=20000):
                     admitted_count=admitted_count,
                     rejected_count=rejected_count,
                     next_person=current_person,
-                    constraint_progress=constraint_progress
+                    accepted_count=accepted_count
                 )
 
                 decision_data = decide_and_next(game_id, person_index, accept=accept)
@@ -119,8 +119,8 @@ def run_algorithm(algo_function: Callable, scenario=1, max_iterations=20000):
 
                 if accept and current_person and current_person.get("attributes"):
                     for attr_id, has_attr in current_person.get("attributes", {}).items():
-                        if has_attr and attr_id in constraint_progress:
-                            constraint_progress[attr_id] += 1
+                        if has_attr and attr_id in accepted_count:
+                            accepted_count[attr_id] += 1
 
                 log_data(decision_data, f"P{person_index:05d} {'ACCEPT' if accept else 'REJECT'}")
 

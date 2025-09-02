@@ -9,7 +9,7 @@ def algo_01_decision(
     admitted_count: int,
     rejected_count: int,
     next_person: Dict[str, Any],
-    constraint_progress: Dict[str, int]
+    accepted_count: Dict[str, int]
 ) -> bool:
     # Simple algorithm: accept everyone
     return True
