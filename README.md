@@ -9,3 +9,4 @@ Coding challenge from https://berghain.challenges.listenlabs.ai/
 
 - 03:00-03:30 concept 1
 - 03:30-04:30 boilerplate code (loop, logs, api calls)
+- 04:30-05:15 algo_2

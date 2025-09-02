@@ -15,4 +15,4 @@ def algo_01_decision(
     return True
 
 if __name__ == "__main__":
-    run_algorithm(algo_01_decision, scenario=1)
+    run_algorithm(algo_01_decision, scenario=1, algo_name="algo_01")
