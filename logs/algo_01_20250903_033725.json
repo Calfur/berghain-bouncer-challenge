@@ -1004,5 +1004,5 @@
   {"timestamp": "2025-09-03T03:42:59.622233", "message": "P0998", "data": {"status": "running", "admittedCount": 999, "rejectedCount": 0, "nextPerson": {"personIndex": 999, "attributes": {"well_dressed": false, "young": false}}}},
   {"timestamp": "2025-09-03T03:43:00.060969", "message": "P0999", "data": {"status": "failed", "reason": "Venue full but constraints not met: young: 305/600 (need 295 more), well_dressed: 326/600 (need 274 more)", "nextPerson": null}},
   {"timestamp": "2025-09-03T03:43:00.061193", "message": "FINAL (FAILED)", "data": {"status": "failed", "reason": "Venue full but constraints not met: young: 305/600 (need 295 more), well_dressed: 326/600 (need 274 more)", "nextPerson": null}},
-  {"timestamp": "2025-09-03T03:43:00.061281", "message": "Game ended with status: failed, total decisions: 999"}
+  {"timestamp": "2025-09-03T03:43:00.061281", "message": "Game ended with status: failed, total decisions: 1000"}
 ]

@@ -5,3 +5,4 @@ Coding challenge from https://berghain.challenges.listenlabs.ai/
 ## effort
 
 - 03:00-03:30 concept 1
+- 03:30-04:30 boilerplate code (loop, logs, api calls)
