@@ -1,12 +1,14 @@
+# API
 
-## API
+## Create a new game:
 
-1. Create a new game:
-/new-game?scenario=1&playerId=e97f8594-f26f-4e0a-b848-0edf468588ca
+https://berghain.challenges.listenlabs.ai/new-game?scenario=1&playerId=e97f8594-f26f-4e0a-b848-0edf468588ca
+
 Choose scenario 1, 2, or 3.
 playerId identifies you as the player.
 
 Returns:
+```
 {
   "gameId": UUID,
   "constraints": {
@@ -24,13 +26,16 @@ Returns:
     }
   }
 }
+```
 
+## Get person and make decision:
 
-2. Get person and make decision:
-/decide-and-next?gameId=uuid&personIndex=0&accept=true
+https://berghain.challenges.listenlabs.ai/decide-and-next?gameId=uuid&personIndex=0&accept=true
+
 Get the next person in the queue. For the first person (personIndex=0), the accept parameter is optional. For subsequent persons, include accept=true or accept=false to make a decision.
 
 Returns:
+```
 {
   "status": "running",
   "admittedCount": number,
@@ -48,3 +53,4 @@ Returns:
   "reason": string,
   "nextPerson": null
 }
+```
