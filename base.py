@@ -14,10 +14,10 @@ os.makedirs("logs", exist_ok=True)
 LOG_FILE = None
 FIRST_LOG_ENTRY = True
 
-def init_logging(algo_name="algo"):
+def init_logging(algo_name, scenario):
     global LOG_FILE, FIRST_LOG_ENTRY
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_filename = f"logs/{algo_name}_{timestamp}.json"
+    log_filename = f"logs/{algo_name}_scenario_{scenario}_{timestamp}.json"
     LOG_FILE = open(log_filename, 'w', buffering=1)
     LOG_FILE.write('[\n')
     FIRST_LOG_ENTRY = True
@@ -68,7 +68,7 @@ def decide_and_next(game_id, person_index, accept=True):
     return response.json()
 
 def run_algorithm(algo_function: Callable, scenario=1, max_iterations=20000, algo_name="algo"):
-    log_filename = init_logging(algo_name=algo_name)
+    log_filename = init_logging(algo_name=algo_name, scenario=scenario)
     print(f"Starting Berghain Bouncer Challenge")
     print(f"Logs will be written to: {log_filename}")
     log("Starting Berghain Bouncer Challenge")

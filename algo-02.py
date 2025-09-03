@@ -37,4 +37,4 @@ def algo_02_decision(
     return total_value < 1.0
 
 if __name__ == "__main__":
-    run_algorithm(algo_02_decision, scenario=1, algo_name="algo_02")
+    run_algorithm(algo_02_decision, scenario=2, algo_name="algo_02")
